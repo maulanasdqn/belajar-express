@@ -1,14 +1,23 @@
-export const users = [
+import { prefixResponse } from "@/utilities";
+import { TBookResponse } from "./types";
+
+export const booksDummy: TBookResponse = prefixResponse([
   {
-    id: 1,
-    fullname: "Maulana Sodiqin",
-    age: 22,
-    email: "maul@org.com"
+    id: "qweqwrqwe",
+    title: "How To Rich",
+    year: 2023,
+    category: "Self Improve",
+    author: "Maulana Sodiqin",
+    price: 20000,
+    authorId: "qwe",
   },
   {
-    id: 2,
-    fullname: "Fenny Oktaviani",
-    age: 23,
-    email: "waduh@waduh.com"
+    id: "lkjlkjlkj",
+    title: "How To Rich",
+    year: 2003,
+    category: "Self Improve",
+    author: "Maulana Sodiqin",
+    price: 30000,
+    authorId: "qrt",
   },
-];
+]);

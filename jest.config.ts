@@ -7,6 +7,7 @@ const config: Config.InitialOptions = {
   automock: false,
   coverageDirectory: "./.coverage",
   moduleDirectories: ["node_modules", "src"],
+  modulePathIgnorePatterns: ["<rootDir>/dist/"],
   moduleNameMapper: {
     "@/(.*)": "<rootDir>/src/$1",
   },

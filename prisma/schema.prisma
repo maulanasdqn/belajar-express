@@ -8,17 +8,27 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
+  id        String       @id @default(uuid())
+  email     String       @unique
   fullname  String?
-  age: Int?
-  posts Post[]
+  age       Int?
+  books     Book[]
 }
 
 model Book {
-  id        Int     @id @default(autoincrement())
-  title     String
-  category  String?
-  author    User    @relation(fields: [authorId], references: [id])
-  authorId  Int
+  id          String       @id @default(uuid())
+  title       String
+  year        Int
+  price       Int
+  author      User         @relation(fields: [authorId], references: [id])
+  category    Category     @relation(fields: [categoryId], references: [id])
+  categoryId  String
+  authorId    String
+}
+
+model Category {
+  id        String         @id @default(uuid())
+  name      String
+  books     Book[]         
+  bookId    Int
 }

@@ -1,14 +1,18 @@
-export const users = [
+import { booksDummy } from "@/routers";
+import { TUserResponse } from "./types";
+import { prefixResponse } from "@/utilities";
+
+export const usersDummy: TUserResponse = prefixResponse([
   {
-    id: 1,
+    id: "qwe",
     fullname: "Maulana Sodiqin",
     age: 22,
-    email: "maul@org.com"
+    email: "maul@org.com",
   },
   {
-    id: 2,
+    id: "qrt",
     fullname: "Fenny Oktaviani",
     age: 23,
-    email: "waduh@waduh.com"
+    email: "waduh@waduh.com",
   },
-];
+]);
