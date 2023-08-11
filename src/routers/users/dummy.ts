@@ -1,4 +1,3 @@
-import { booksDummy } from "@/routers";
 import { TUserResponse } from "./types";
 import { prefixResponse } from "@/utilities";
 

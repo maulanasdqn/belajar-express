@@ -1,9 +1,23 @@
 export type TPrefixResponse<T> = {
-  data: T
-}
+  data?: T | null;
+};
 
-export const prefixResponse = (items: any): TPrefixResponse<any> => {
+export type TPrefixResponseError = {
+  message?: string | null;
+  status?: number | null;
+};
+
+export const prefixResponse = <T>(items: T): TPrefixResponse<T> => {
   return {
     data: items,
+  };
+};
+
+export const prefixErrorResponse = (
+  props: TPrefixResponseError,
+): TPrefixResponseError => {
+  return {
+    message: props?.message,
+    status: props?.status,
   };
 };

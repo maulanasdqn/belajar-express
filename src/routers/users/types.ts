@@ -3,10 +3,12 @@ import { TPrefixResponse } from "@/utilities";
 
 export type TUserItem = {
   id: string;
-  fullname: string;
-  age: number;
+  fullname?: string | null;
+  age?: number | null;
   email: string;
-  books?: Array<TBookItem>
-}
+  books?: Array<TBookItem>;
+};
 
-export type TUserResponse = TPrefixResponse<TUserItem[]>
+export type TUserResponse = TPrefixResponse<TUserItem[]>;
+
+export type TUserDetailResponse = TPrefixResponse<TUserItem>;

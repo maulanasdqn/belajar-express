@@ -6,9 +6,10 @@ export type TBookItem = {
   title: string;
   year: number;
   price: number;
-  author: string;
-  category: string;
+  categoryId: string;
   authorId: string;
 }
 
 export type TBookResponse = TPrefixResponse<TBookItem[]>
+
+export type TBookDetailResponse = TPrefixResponse<TBookItem>
